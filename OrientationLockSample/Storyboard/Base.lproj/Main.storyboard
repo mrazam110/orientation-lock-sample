@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OrientationLockSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOd-96-eQJ">
+                                <rect key="frame" x="31.5" y="219" width="257" height="30"/>
+                                <state key="normal" title="Rotate to Portrait and Lock to Portrait"/>
+                                <connections>
+                                    <action selector="rotateAndLockPortraitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c4K-ZO-N3t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDy-jR-dQH">
+                                <rect key="frame" x="7.5" y="269" width="305" height="30"/>
+                                <state key="normal" title="Rotate to Landscape and Lock to Landscape"/>
+                                <connections>
+                                    <action selector="rorateAndLockLandscapeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NAR-Ae-iaC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="691-Pn-23N">
+                                <rect key="frame" x="52" y="369" width="216" height="30"/>
+                                <state key="normal" title="Lock orientation to Portrait only"/>
+                                <connections>
+                                    <action selector="lockPortraitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7pg-97-Fpv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LmH-41-bZl">
+                                <rect key="frame" x="40" y="319" width="240" height="30"/>
+                                <state key="normal" title="Lock orientation to Landscape only"/>
+                                <connections>
+                                    <action selector="lockLandscapeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DP8-wX-fwH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8n-rb-PPB">
+                                <rect key="frame" x="145" y="173" width="30" height="30"/>
+                                <state key="normal" title="All"/>
+                                <connections>
+                                    <action selector="lockAllTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="txc-dI-rLc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LmH-41-bZl" firstAttribute="centerX" secondItem="jDy-jR-dQH" secondAttribute="centerX" id="0dR-gQ-yLw"/>
+                            <constraint firstItem="eOd-96-eQJ" firstAttribute="top" secondItem="R8n-rb-PPB" secondAttribute="bottom" constant="16" id="8FD-ZC-Y3u"/>
+                            <constraint firstItem="R8n-rb-PPB" firstAttribute="centerX" secondItem="eOd-96-eQJ" secondAttribute="centerX" id="BrJ-ql-p7U"/>
+                            <constraint firstItem="LmH-41-bZl" firstAttribute="top" secondItem="jDy-jR-dQH" secondAttribute="bottom" constant="20" id="Iip-5n-2KC"/>
+                            <constraint firstItem="jDy-jR-dQH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J1g-QZ-8g4"/>
+                            <constraint firstItem="691-Pn-23N" firstAttribute="centerX" secondItem="LmH-41-bZl" secondAttribute="centerX" id="Q2k-9T-iBQ"/>
+                            <constraint firstItem="691-Pn-23N" firstAttribute="top" secondItem="LmH-41-bZl" secondAttribute="bottom" constant="20" id="VS2-jn-PYI"/>
+                            <constraint firstItem="eOd-96-eQJ" firstAttribute="centerX" secondItem="jDy-jR-dQH" secondAttribute="centerX" id="Whx-g7-5P0"/>
+                            <constraint firstItem="jDy-jR-dQH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZJp-mp-csH"/>
+                            <constraint firstItem="jDy-jR-dQH" firstAttribute="top" secondItem="eOd-96-eQJ" secondAttribute="bottom" constant="20" id="gCx-WK-lwe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
